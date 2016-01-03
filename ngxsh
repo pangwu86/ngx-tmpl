@@ -1,0 +1,9 @@
+#!/bin/bash
+cmd=$1
+cdir=/root/xxx
+if [ -n "$cmd" ]
+then 
+	nginx -p $cdir -c $cdir/conf/nginx.conf -s $cmd
+else 
+	nginx -p $cdir -c $cdir/conf/nginx.conf
+fi
